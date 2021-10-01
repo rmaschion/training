@@ -78,7 +78,6 @@ parso==0.7.1
 passlib==1.7.4
 pexpect==4.8.0
 pickleshare==0.7.5
-Pillow==8.0.1
 prompt-toolkit==3.0.8
 proto-plus==1.19.0
 protobuf==3.17.3
@@ -87,8 +86,6 @@ ptyprocess==0.6.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycparser==2.20
-pycryptodome==3.4.3
-Pygments==2.7.2
 pylint==2.5.3
 pymongo==3.11.1
 PyMySQL==1.0.2
