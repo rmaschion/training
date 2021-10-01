@@ -3,6 +3,6 @@ services:
   test:
     build: .
     volumes:
-      - .:/organizer_backend/
+      - .:/training/
     stdin_open: true
     tty: true
