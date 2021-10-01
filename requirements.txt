@@ -93,9 +93,6 @@ pylint==2.5.3
 pymongo==3.11.1
 PyMySQL==1.0.2
 PyNaCl==1.4.0
-pyobjc-core==7.3
-pyobjc-framework-Cocoa==7.3
-pyobjc-framework-WebKit==7.3
 pyparsing==2.4.7
 Pyrebase==3.0.27
 pyrsistent==0.18.0
