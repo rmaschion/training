@@ -1,1 +1,1 @@
-web: gunicorn run=main.py
+web: gunicorn run=flask_app/src/backend/main.py
