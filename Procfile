@@ -1,1 +1,1 @@
-web: gunicorn --env FLASK_APP=main.py --chdir flask_app/src/backend/ main:main
+web: gunicorn --env FLASK_APP=flask_app/src/backend/ main:main
