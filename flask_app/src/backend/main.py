@@ -2,6 +2,10 @@ import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.path.curdir, '../../../webview')))
 sys.path.append(os.path.abspath(os.path.curdir))
 
+from flask import Flask
+
+app = Flask(__name__)
+
 # print(os.path.abspath(os.path.curdir))
 import logging
 print("BEFORE IMPORT")
