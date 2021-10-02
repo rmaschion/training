@@ -1,6 +1,8 @@
 FROM python:3.9
 # MAINTAINER python_student
 
+RUN FLASK_APP=flask_app/src/backend/app.py
+
 RUN mkdir training/
 COPY requirements.txt training/
 COPY setup.py training/setup.py
