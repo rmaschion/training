@@ -5,9 +5,9 @@ from functools import wraps
 
 from flask import Flask, render_template, jsonify, request
 import webview
-import app
+import main
 
-gui_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'gui')  # development path
+gui_dir = os.path.join(os.path.dirname(__file__), '..','gui')  # development path
 
 if not os.path.exists(gui_dir):  # frozen executable path
     gui_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'gui')
@@ -50,7 +50,7 @@ def initialize():
     Perform heavy-lifting initialization asynchronously.
     :return:
     '''
-    can_start = app.initialize()
+    can_start = main.initialize()
 
     if can_start:
         response = {
@@ -103,7 +103,7 @@ def open_url():
 @server.route('/do/stuff', methods=['POST'])
 @verify_token
 def do_stuff():
-    result = app.do_stuff()
+    result = main.do_stuff()
 
     if result:
         response = {'status': 'ok', 'result': result}

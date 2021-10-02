@@ -15,6 +15,16 @@ with redirect_stdout(stream):
     print('WINDOW IS CREATED')
     webview.start(debug=True)
 
+def initialize():
+    # perform heavy stuff here
+    return True
+
+
+def do_stuff():
+    # do whatever you need to do
+    response = "This is response from Python backend"
+    return response
+
 # @app.route("/")
 # def home_view():
 #     return "<h1>Welcome to Geeks for Geeks</h1>"
