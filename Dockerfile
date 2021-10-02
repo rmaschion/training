@@ -6,7 +6,7 @@ RUN FLASK_APP=flask_app/src/backend/app.py
 RUN mkdir training/
 COPY requirements.txt training/
 COPY setup.py training/setup.py
-RUN cd training_project
+RUN cd training
 
 RUN pip3 install --upgrade pip
 RUN pip3 install -e .
