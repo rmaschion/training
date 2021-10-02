@@ -2,6 +2,9 @@
 Application stub
 """
 
+from flask import Flask
+
+app = Flask(__name__)
 
 def initialize():
     # perform heavy stuff here
