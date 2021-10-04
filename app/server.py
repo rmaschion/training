@@ -8,7 +8,7 @@ import webview
 import main
 
 gui_dir = os.path.join(os.path.dirname(__file__), '..','gui')  # development path
-print("********************************{gui_dir}*************")
+
 if not os.path.exists(gui_dir):  # frozen executable path
     gui_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'gui')
 
