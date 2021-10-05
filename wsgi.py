@@ -1,9 +1,9 @@
 import webview
 from flask import Flask
 
-print("************BEFORE IMPORT********")
-from app.main import app
-print("************after IMPORT********")
+# print("************BEFORE IMPORT********")
+# from app.main import app
+# print("************after IMPORT********")
 print("************BEFORE FLASK********")
 app = Flask(__name__)
 print("************after FLASK********")
