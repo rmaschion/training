@@ -4,7 +4,7 @@ from flask import Flask
 
 from contextlib import redirect_stdout
 from io import StringIO
-from server import server
+from .server import server
 
 app = Flask(__name__)
 
@@ -15,15 +15,6 @@ with redirect_stdout(stream):
     print('WINDOW IS CREATED')
     webview.start(debug=True)
 
-def initialize():
-    # perform heavy stuff here
-    return True
-
-
-def do_stuff():
-    # do whatever you need to do
-    response = "This is response from Python backend"
-    return response
 
 # @app.route("/")
 # def home_view():
