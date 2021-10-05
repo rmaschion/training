@@ -4,6 +4,7 @@ import webbrowser
 from functools import wraps
 from flask import Flask, render_template, jsonify, request
 import webview
+import app
 
 gui_dir = os.path.join(os.path.dirname(__file__), '..','gui')  # development path
 print("********************************{gui_dir}*************")
@@ -12,11 +13,6 @@ if not os.path.exists(gui_dir):  # frozen executable path
 
 server = Flask(__name__, static_folder=gui_dir, template_folder=gui_dir)
 server.config['SEND_FILE_MAX_AGE_DEFAULT'] = 1  # disable caching
-
-
-def initialize():
-    # perform heavy stuff here
-    return True
 
 
 def verify_token(function):
@@ -53,7 +49,7 @@ def initialize():
     Perform heavy-lifting initialization asynchronously.
     :return:
     '''
-    can_start = initialize()
+    can_start = app.initialize()
 
     if can_start:
         response = {
