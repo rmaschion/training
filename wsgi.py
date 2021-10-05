@@ -24,7 +24,7 @@ def home_view():
     with redirect_stdout(stream):
         window = webview.create_window('My first pywebview application', server)
         print('WINDOW IS CREATED')
-        webview.start(debug=True)
+        window.start(debug=True)
     # return "<h1>Welcome to Geeks for Geeks</h1>"
 
 if __name__ == "__main__":
