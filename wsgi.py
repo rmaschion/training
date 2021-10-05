@@ -22,15 +22,15 @@ def home_view():
     # logger = logging.getLogger(__name__)
     stream = StringIO()
     with redirect_stdout(stream):
-        window = webview.create_window('My first pywebview application', server)
+        webview.create_window('My first pywebview application', server)
         print('WINDOW IS CREATED')
-        window.start(debug=True)
+        webview.start(debug=True)
     # return "<h1>Welcome to Geeks for Geeks</h1>"
 
 if __name__ == "__main__":
     app.run()
     stream = StringIO()
     with redirect_stdout(stream):
-        window = webview.create_window('My first pywebview application', server)
+        webview.create_window('My first pywebview application', server)
         print('WINDOW IS CREATED')
         webview.start(debug=True)
