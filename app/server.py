@@ -5,7 +5,7 @@ from functools import wraps
 print("********************************INSIDE SERVER*************")
 from flask import Flask, render_template, jsonify, request
 import webview
-import main
+# import main
 
 gui_dir = os.path.join(os.path.dirname(__file__), '..','gui')  # development path
 
@@ -42,6 +42,9 @@ def landing():
     """
     return render_template('index.html', token=webview.token)
 
+def initialize():
+    # perform heavy stuff here
+    return True
 
 @server.route('/init', methods=['POST'])
 @verify_token
@@ -50,7 +53,8 @@ def initialize():
     Perform heavy-lifting initialization asynchronously.
     :return:
     '''
-    can_start = main.initialize()
+    # can_start = main.initialize()
+    can_start = initialize()
 
     if can_start:
         response = {
@@ -100,14 +104,14 @@ def open_url():
     return jsonify({})
 
 
-@server.route('/do/stuff', methods=['POST'])
-@verify_token
-def do_stuff():
-    result = main.do_stuff()
-
-    if result:
-        response = {'status': 'ok', 'result': result}
-    else:
-        response = {'status': 'error'}
-
-    return jsonify(response)
+# @server.route('/do/stuff', methods=['POST'])
+# @verify_token
+# def do_stuff():
+#     result = main.do_stuff()
+#
+#     if result:
+#         response = {'status': 'ok', 'result': result}
+#     else:
+#         response = {'status': 'error'}
+#
+#     return jsonify(response)
